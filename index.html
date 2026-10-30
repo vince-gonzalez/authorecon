@@ -190,10 +190,10 @@ pre{font-family:var(--mono);background:var(--panel2);
       <h3>Not covered here</h3>
       <ul>
         <li>Whether each deposited document agrees with its own record —
-            needs the files, so it runs on the command line.</li>
-        <li>Whether outbound links still resolve — a browser cannot check
-            other people's servers, so this runs on the command line too.</li>
-        <li>Anything requiring a repository to read.</li>
+            that needs the files opened, which the full report does for you.</li>
+        <li>Whether outbound links still resolve — a browser cannot reach
+            other people's servers; the full report checks them.</li>
+        <li>Anything that needs the deposited files read.</li>
       </ul>
       <p class="detail" style="margin-top:16px">Nothing above is scored or
       graded. Each section states what was found and what could not be
@@ -204,39 +204,33 @@ pre{font-family:var(--mono);background:var(--panel2);
   </div>
 
   <section class="block">
-    <h3>Checking a reference list instead</h3>
-    <p class="says" style="margin-bottom:16px">Paste a bibliography and every
-    entry is resolved against the indexes that would hold it, with what was
-    found set beside what was written. It needs no ORCID and no account.</p>
-    <p><a href="/glance/" style="font-size:16px">Glance &rarr;</a></p>
-  </section>
-
-  <section class="block" style="border-bottom:0">
-    <h3>The same checks, on the command line</h3>
-    <pre>pip install authorecon
-authorecon-report 0000-0002-1825-0097</pre>
-    <p class="detail">Nineteen checks, no dependencies. The command line
-    version also reads deposited PDFs, resolves outbound links, and inspects
-    dependency graphs — the things a browser is not allowed to do.</p>
-  </section>
-
-  <section class="block" style="border-bottom:0">
-    <h3>Or it gets run for you</h3>
-    <p class="says" style="margin-bottom:16px">The same command line checks,
-    run here and sent back as a document you can keep and forward. The reference check reads the whole list, not the first 25, and reports
-    the identifier for anything cited without one. The record report adds
-    the outbound-link and deposit checks a browser is not permitted to run.</p>
-    <p class="detail" style="margin-bottom:16px">Reference Check, $1.99. Record
-    Report, $9.99. Nothing on this page becomes paid, and nothing here is
-    withheld to sell the other thing.</p>
+    <h3>Get the full report</h3>
+    <p class="says" style="margin-bottom:16px">The pass above reads this record
+    in your browser. The full report reads what a browser cannot: it resolves
+    every reference in the list — not the first 25 — follows the outbound
+    links, and reads the deposited files. One document, checked in full and
+    sent back to you to keep and forward.</p>
+    <p class="detail" style="margin-bottom:18px"><b>Reference Check, $1.99.
+    Record Report, $9.99.</b> A whole reference list, or one author's published
+    record, checked the way a browser cannot and returned as a document.</p>
     <p><a href="/order/" style="font-size:16px">What that costs and what
     arrives &rarr;</a></p>
+  </section>
+
+  <section class="block" style="border-bottom:0">
+    <h3>Try it on a reference list, free</h3>
+    <p class="says" style="margin-bottom:16px">Paste a bibliography and see it
+    resolved against the indexes that would hold it, with what was found set
+    beside what was written — in your browser, no ORCID and no account. A taste
+    of the Reference Check.</p>
+    <p><a href="/glance/" style="font-size:16px">Glance &rarr;</a></p>
   </section>
 
 </main>
 
 <footer>
   <div class="wrap">
+    <p>Also a command-line tool for developers: <code>pip install authorecon</code>.</p>
     <p>Authorecon is part of <a href="https://f-keys.com">F-Keys</a>.</p>
     <p>www.f-keys.com &nbsp;|&nbsp; &copy; 2026 F-Keys Creative LLC</p>
   </div>
